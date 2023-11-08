@@ -12,13 +12,14 @@ public class CreateUserTest  extends BaseClass{
 	
 	@Test
 	public void createUserTest() {
+		//This test has failed
 		SoftAssert soft=new SoftAssert();
 		home.clickUserTab();
 		soft.assertTrue(users.getpageHeader().contains("Users"));
 		
 		users.clickNewButton();
 		soft.assertEquals(addUser.getPageHeader(), "Add New User");
-		Map<String, String> map=excel.readFromExcel("Sheet1","Add User");
+		Map<String, String> map=excel.readFormExcel("Sheet1","Add User");
 		addUser.createNewUser(map.get("Email"), map.get("Password"), map.get("Firstname"), map.get("Lastname"), map.get("Address"), map.get("Contact Info"), map.get("Photo"));
 		soft.assertTrue(users.getSuccessMessage().contains("Success"));
 		
