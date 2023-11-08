@@ -12,7 +12,7 @@ import genericLibraries.BaseClass;
 public class CreateCategoryTest extends BaseClass {
 	@Test
 	public void createCategoryTest() throws InterruptedException{
-		//this test has been changed
+		//this test has been changed to skillrary
 		SoftAssert soft=new SoftAssert();
 		home.clickCourseTab();
 		home.clickCategoryLink();
