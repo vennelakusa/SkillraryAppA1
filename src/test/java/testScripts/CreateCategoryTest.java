@@ -11,6 +11,7 @@ import genericLibraries.BaseClass;
 
 public class CreateCategoryTest extends BaseClass {
 	@Test
+	//test script pass
 	public void createCategoryTest() throws InterruptedException{
 		//this test has been changed to skillrary
 		SoftAssert soft=new SoftAssert();
